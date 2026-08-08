@@ -1,0 +1,12 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "testing nodejs for webdev",
+  "license": "ISC",
+  "author": "Harshil",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
