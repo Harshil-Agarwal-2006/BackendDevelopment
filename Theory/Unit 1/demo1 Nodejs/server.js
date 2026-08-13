@@ -1,16 +1,20 @@
 const express = require("express");
 const app = express();
 
+app.set("view engine", "ejs");
+
+const students = [
+    { id: 1, name: "Aarav", branch: "CSE" },
+    { id: 2, name: "Diya", branch: "ECE" },
+    { id: 3, name: "Rohan", branch: "IT" }
+];
+
 app.get("/", (req, res) => {
-    res.send("Welcome to the Student Management API");
+    res.render("home");
 });
 
 app.get("/students", (req, res) => {
-    res.send("List of all students");
-});
-
-app.get("/students/1", (req, res) => {
-    res.send("Student: Aarav, Roll No: 1");
+    res.render("students", { students: students });
 });
 
 app.listen(3000, () => {
