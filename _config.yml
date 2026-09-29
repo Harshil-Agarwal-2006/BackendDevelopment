@@ -1,0 +1,3 @@
+exclude:
+  - node_modules
+  - Lab/Experiment 12A/nodejs-express-lab/node_modules
