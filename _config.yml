@@ -1,3 +1,4 @@
 exclude:
   - node_modules
   - Lab/Experiment 12A/nodejs-express-lab/node_modules
+  - Theory/Unit 1/demo1 Nodejs/node_modules
