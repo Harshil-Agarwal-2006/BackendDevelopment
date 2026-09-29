@@ -5,6 +5,6 @@ Both Lab and Theory
 
 Below are the Links to access their folders:
 
-[Lab](./Lab/README.md)
+[View Lab README](./Lab/README.md)
 
 [Theory]
