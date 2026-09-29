@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo Matrix</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <h1>Todo Matrix</h1>
+
+        <p>
+            Organize your tasks by importance and urgency.
+        </p>
+
+    </header>
+
+
+    <!-- =========================================
+         ADD TASK SECTION
+    ========================================== -->
+
+    <section class="add-task">
+
+        <h2>Add a Task</h2>
+
+
+        <form id="taskForm">
+
+            <!-- Task name -->
+
+            <div class="form-group">
+
+                <label for="title">
+                    Task
+                </label>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter your task..."
+                    required
+                >
+
+            </div>
+
+
+            <!-- Importance -->
+
+            <div class="form-group">
+
+                <label for="importance">
+                    Importance
+                </label>
+
+                <select id="importance">
+
+                    <option value="1">
+                        1 - Important
+                    </option>
+
+                    <option value="0">
+                        0 - Not Important
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Urgency -->
+
+            <div class="form-group">
+
+                <label for="urgency">
+                    Urgency
+                </label>
+
+                <select id="urgency">
+
+                    <option value="1">
+                        1 - Urgent
+                    </option>
+
+                    <option value="0">
+                        0 - Not Urgent
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Submit button -->
+
+            <button type="submit">
+                Add Task
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CARTESIAN PLANE
+    ========================================== -->
+
+    <main>
+
+        <h2>Your Tasks</h2>
+
+
+        <div class="matrix-container">
+
+
+            <!-- Y AXIS -->
+
+            <div class="y-axis">
+
+                <span>
+                    IMPORTANCE
+                </span>
+
+            </div>
+
+
+            <!-- X AXIS -->
+
+            <div class="x-axis">
+
+                <span>
+                    URGENCY
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================
+                 QUADRANT 2
+            ================================== -->
+
+            <div
+                class="quadrant quadrant-2"
+                id="quadrant2"
+            >
+
+                <h3>
+                    Q2
+                </h3>
+
+                <h4>
+                    Important & Not Urgent
+                </h4>
+
+                <p>
+                    Plan / Schedule
+                </p>
+
+
+                <div class="task-container">
+
+                    <!-- Tasks will appear here -->
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 QUADRANT 1
+            ================================== -->
+
+            <div
+                class="quadrant quadrant-1"
+                id="quadrant1"
+            >
+
+                <h3>
+                    Q1
+                </h3>
+
+                <h4>
+                    Important & Urgent
+                </h4>
+
+                <p>
+                    Do First
+                </p>
+
+
+                <div class="task-container">
+
+                    <!-- Tasks will appear here -->
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 QUADRANT 4
+            ================================== -->
+
+            <div
+                class="quadrant quadrant-4"
+                id="quadrant4"
+            >
+
+                <h3>
+                    Q4
+                </h3>
+
+                <h4>
+                    Not Important & Not Urgent
+                </h4>
+
+                <p>
+                    Avoid / Eliminate
+                </p>
+
+
+                <div class="task-container">
+
+                    <!-- Tasks will appear here -->
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 QUADRANT 3
+            ================================== -->
+
+            <div
+                class="quadrant quadrant-3"
+                id="quadrant3"
+            >
+
+                <h3>
+                    Q3
+                </h3>
+
+                <h4>
+                    Not Important & Urgent
+                </h4>
+
+                <p>
+                    Delegate / Quick Tasks
+                </p>
+
+
+                <div class="task-container">
+
+                    <!-- Tasks will appear here -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
