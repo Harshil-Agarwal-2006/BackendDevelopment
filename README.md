@@ -7,4 +7,5 @@ Below are the Links to access their folders:
 
 [Lab](./Lab/README.md)
 
-[Theory]
+[Theory](./Theory/README.md)
+
