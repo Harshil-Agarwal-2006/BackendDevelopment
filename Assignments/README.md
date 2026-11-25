@@ -2,16 +2,16 @@
 
 The following assignments were completed as part of the **Backend Development** course.
 
-## Assignment 01 – Notes App using LocalStorage
+## Assignment 1 – Notes App using LocalStorage
 
-A browser-based Notes Application developed using HTML, CSS, and JavaScript. It implements CRUD operations and uses `localStorage` with JSON to persist notes between browser sessions.
+A browser-based Notes Application developed using HTML, CSS, and JavaScript. It supports adding, editing, and deleting notes while using `localStorage` and JSON for persistent storage.
 
-[View Assignment 01](./Assignment%2001/README.md)
+[View Assignment 1](./Assignment%201/README.md)
 
 ---
 
-## Assignment 02 – PostgreSQL as SQL + NoSQL using JSONB
+## Assignment 2 – PostgreSQL as SQL + NoSQL using JSONB
 
-An exploration of PostgreSQL's `jsonb` data type using a product catalog. The assignment covers JSONB queries, JSONB updates, GIN indexing, query performance, and a comparison with MongoDB.
+An exploration of PostgreSQL's `jsonb` data type using a product catalog. The assignment covers JSONB queries, flexible attributes, GIN indexing, query performance, and comparison with MongoDB.
 
-[View Assignment 02](./Assignment%2002/README.md)
+[View Assignment 2](./Assignment%202/README.md)
