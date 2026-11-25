@@ -23,7 +23,7 @@ console.log("Total Students:", students.length);
 
 let student = {
     id: 101,
-    name: "Atharva",
+    name: "Harshil",
     course: "B.Tech CSE",
     semester: 5
 };
