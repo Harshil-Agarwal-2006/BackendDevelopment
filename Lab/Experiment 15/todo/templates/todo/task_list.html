@@ -1,0 +1,76 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}My Tasks | Task Tracker{% endblock %}
+
+{% block content %}
+
+<div class="page-heading">
+    <h1>My Tasks</h1>
+    <p>Manage your daily tasks and stay productive.</p>
+</div>
+
+<div class="task-actions">
+    <a href="{% url 'add_task' %}" class="btn btn-primary">
+        + Add New Task
+    </a>
+</div>
+
+<div class="task-list">
+
+    {% for task in tasks %}
+        <div class="task-card">
+
+            <div class="task-info">
+                <h3 class="{% if task.completed %}completed{% endif %}">
+                    {{ task.title }}
+                </h3>
+
+                <small>
+                    Created: {{ task.created_at|date:"M d, Y" }}
+                </small>
+
+                <span class="status">
+                    {% if task.completed %}
+                        Completed
+                    {% else %}
+                        Pending
+                    {% endif %}
+                </span>
+            </div>
+
+            <div class="task-buttons">
+
+                <form method="POST"
+                      action="{% url 'toggle_task' task.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-secondary">
+                        {% if task.completed %}
+                            Mark Pending
+                        {% else %}
+                            Complete
+                        {% endif %}
+                    </button>
+                </form>
+
+                <form method="POST"
+                      action="{% url 'delete_task' task.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">
+                        Delete
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+    {% empty %}
+        <div class="empty-state">
+            <h3>No tasks yet!</h3>
+            <p>Add your first task to get started.</p>
+        </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

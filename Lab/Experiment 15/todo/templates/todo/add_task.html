@@ -1,0 +1,41 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}Add Task | Task Tracker{% endblock %}
+
+{% block content %}
+
+<div class="form-container">
+
+    <div class="page-heading">
+        <h1>Add New Task</h1>
+        <p>What would you like to accomplish?</p>
+    </div>
+
+    <form method="POST" class="task-form">
+        {% csrf_token %}
+
+        <label for="title">Task Title</label>
+
+        <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter your task..."
+            maxlength="200"
+            required
+        >
+
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">
+                Save Task
+            </button>
+
+            <a href="{% url 'task_list' %}" class="btn btn-secondary">
+                Cancel
+            </a>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

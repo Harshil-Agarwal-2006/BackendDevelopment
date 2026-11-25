@@ -1,0 +1,18 @@
+{% load static %}
+
+<header class="header">
+    <div class="header-content">
+        <div class="brand">
+            <img src="{% static 'todo/images/logo.png' %}"
+                 alt="Task Tracker logo"
+                 width="40"
+                 height="40">
+            <h2>Task Tracker</h2>
+        </div>
+
+        <nav>
+            <a href="{% url 'task_list' %}">Home</a>
+            <a href="{% url 'add_task' %}">Add Task</a>
+        </nav>
+    </div>
+</header>
