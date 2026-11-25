@@ -6,7 +6,7 @@ The following assignments were completed as part of the **Backend Development** 
 
 A browser-based Notes Application developed using HTML, CSS, and JavaScript. It supports adding, editing, and deleting notes while using `localStorage` and JSON for persistent storage.
 
-[View Assignment 1](./Assignment%201/README.md)
+[View Assignment 1](./Assignment%201/)
 
 ---
 
@@ -14,4 +14,4 @@ A browser-based Notes Application developed using HTML, CSS, and JavaScript. It 
 
 An exploration of PostgreSQL's `jsonb` data type using a product catalog. The assignment covers JSONB queries, flexible attributes, GIN indexing, query performance, and comparison with MongoDB.
 
-[View Assignment 2](./Assignment%202/README.md)
+[View Assignment 2](./Assignment%202/)
